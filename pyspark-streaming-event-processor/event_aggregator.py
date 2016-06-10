@@ -75,7 +75,7 @@ if __name__ == "__main__":
            2. Converts events to json.
            3. Pushes events to elasticsearch
            3. Also stores the events for every bacth in files in current directory(Ex: events_data/year=2016/month=6/day=10/hour=1)
-           TODO: Persist the model to HDFS/ local files system for later use.
+           TODO: Persist the model to HDFS system for later use.
         '''
 
     # Intialized Spark config
