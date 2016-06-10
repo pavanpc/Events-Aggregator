@@ -31,8 +31,8 @@ Follow below steps.
    
 ###Real time event processing
 1. I am using Spark streaming to process events.
-2. The stremaing program reads data from kafka and aggrgates results using a micro batch of interval 10 seconds. I have set it to 10 seconds just to test application behavior quickly.
-3. The program reads data and stores it in <b>elasticsearch</b>.
+2. The streaming program reads data from kafka and aggrgates results using a micro batch of interval 10 seconds. I have set it to 10 seconds just to test application behavior quickly.This should be configured based on production loads.
+3. The program reads events, aggregates them using micro batches and stores(events)  in <b>elasticsearch</b>.
 4. At the same time it stores events in local file system in the following format.
 
    <b> events_data/year=2016/month=6/day=10/hour=1 </b>
@@ -45,8 +45,8 @@ Follow below steps.
 #### Why Elasticsearch?
   1. Elasticsearch provides very good SLA for reading data and aggregations. With my experience its<b> ~<20 ms</b? for normal search and aggregation queries for around <b>100 million records with 3 nodes(AWS medium size machine) cluster</b>. 
   2. It uses Inverted indexes(lucene) for storing data and hence its faster.
-  3. Also, we can build realtime dashboards using Kibana on top of it. This will be very helpful for Business guys to do analysis in real time.
-  4. The data in elasticsearch can be purged for better perfomrance. We can store data for past 1 or 2 months and set TTL for purging past data. In the mean time we can store data(stored in files/s3 ) in HDFS for later analysis. 
+  3. Also, we can build <b>realtime dashboards using Kibana </b>on top of it. This will be very helpful for Business guys to do analysis in real time.
+  4. The data in elasticsearch can be <b>purged for better perfomrance. We can store data for past 1 or 2 months and set TTL for purging historical  data</b>. In the mean time we can store data(stored in files/s3 ) in HDFS for later analysis. 
   
 ###Ability to request the aggregated data by time range
 1. I have created a RESTful api service using java dropwizard.Using these api's we can run aggegations/ search queries on events.
