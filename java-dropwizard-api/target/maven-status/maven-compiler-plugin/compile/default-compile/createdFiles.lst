@@ -1,0 +1,9 @@
+com/getsocial/events/resources/EventsResource.class
+com/getsocial/events/service/EventsService.class
+com/getsocial/events/apiEntities/ResponseObject.class
+com/getsocial/events/dao/ElasticsearchDao.class
+com/getsocial/events/Utils/Constants.class
+com/getsocial/events/apiEntities/ResponseUtils.class
+com/getsocial/events/application/GetSocialEventsApp.class
+com/getsocial/events/configuration/AppConfiguration.class
+com/getsocial/events/apiEntities/ResponseStatus.class
