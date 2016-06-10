@@ -20,6 +20,15 @@ import org.json.JSONObject;
 
 import eventaggregator.config.AppConfig;
 
+
+/**
+ * @author Pavan PC
+ * @Date 10-June-2016
+ * 
+ *       Main Application class which publishes events to kafka
+ *
+ */
+
  public class KafkaProducer {
     private static kafka.javaapi.producer.Producer<String, String> producer;
     private static final String topic= "get_social_events";
@@ -33,6 +42,18 @@ import eventaggregator.config.AppConfig;
         ProducerConfig producerConfig = new ProducerConfig(properties);
         producer = new Producer<String, String>(producerConfig);
     }
+    
+    
+    /**
+	   * This method publishes messages to kafka .
+	   * @param
+	   * 		publishFrquencyInSeconds- Frequency of publishing events in seconds
+	   * 		
+	   * @exception InterruptedException On process interuption.
+	   * 			FileNotFoundException If events.txt file not found
+	   * 			JSONException On error in parsing event json
+	   * 
+	   */
     public void publishMesssage( Integer publishFrquencyInSeconds) {            
           
     	// Start a thread pool which reads events from file every second and publishes to kafka
@@ -83,10 +104,10 @@ import eventaggregator.config.AppConfig;
 
     public static void main(String[] args) throws Exception {
     	  AppConfig appConfig = new AppConfig();
-    	  appConfig.init();
+    	 // appConfig.init();
           KafkaProducer kafkaProducer = new KafkaProducer();
           // Initialize producer
-          System.out.println(appConfig.getKafkaHostName());
+          System.out.println("Started Publishing events..........");
           kafkaProducer.initialize(appConfig.getKafkaHostName());            
           // Publish events to Kafka
           kafkaProducer.publishMesssage(appConfig.getPublishFrquencyInSeconds());
