@@ -38,7 +38,7 @@ Follow below steps.
    <b> events_data/year=2016/month=6/day=10/hour=1 </b>
 5. The data is stored using partitions like year, month , day and hour. This will be very helpful in processing data in future as explained later in the section below.
 
-#### Why Streaming spark?
+#### Why Spark Streaming?
   1. Spark stremaing works really well with a lot of events. It gives very good abstractions for data transformation(map,reduce,filter,aggregation etc).Also its easy to change the soure(kafka) and destination(local file, s3,HDFS etc) just with less modifications.
   
   2. I have used pyspark because , we can find good documentation and help for python and scala compared to java.Also its easy to find python programmers compared to scala.So I thought it would be good to go with python considering future code maintenance.
