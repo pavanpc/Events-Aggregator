@@ -49,9 +49,10 @@ Follow below steps.
   4. The data in elasticsearch can be <b>purged for better perfomrance. We can store data for past 1 or 2 months and set TTL for purging historical  data</b>. In the mean time we can store data(stored in files/s3 ) in HDFS for later analysis. 
   
 ###Ability to request the aggregated data by time range
-1. I have created a RESTful api service using java dropwizard.Using these api's we can run aggegations/ search queries on events.
+1. I have created a <b>RESTful api service using java dropwizard </b>.Using these api's we can run aggegations/ search queries on events.
 2. The api uses data stored in elasticsearch.
-3. Below are the api endpoints for the same.
+3. I have used <b>DAO design pattern</b> to implements api's.The code is available here    https://github.com/pavanpc/Events-Aggregator/tree/master/java-dropwizard-api
+4. Below are the api endpoints for the same.
    
    a. <b>Count API :</b>
 
