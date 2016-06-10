@@ -23,7 +23,7 @@ Follow below steps.
 2. The api inturn publishes  events to kafka.
 
 3. I have written a Kafka producer java app to mock this behavior. It pubslishes events to kafka using <b>SheduledExecutor Thread poool(10) servie </b> every second. The publish frequency is configurbale. This can be set in AppConfig.properties file.
-#### Why Kakfka? 
+#### Why Kafka? 
    1. The events should be processed in realtime and assuming huge number of events being sent. I decided to go with kafka.
    
    2. Also the backend will not be heavy as it just needs to publish events to kafka.
@@ -35,7 +35,7 @@ Follow below steps.
 3. The program reads data and stores it in <b>elasticsearch</b>.
 4. At the same time it stores events in local file system in the following format.
 
-      </b> events_data/year=2016/month=6/day=10/hour=1 </b>
+   </b> events_data/year=2016/month=6/day=10/hour=1 </b>
 5. The data is stored using partitions like year, month , daya and hout. This will be very helpful in processing data in future as explained later in the section below.
 
 #### Why Streaming spark?
