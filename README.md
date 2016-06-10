@@ -57,12 +57,10 @@ Follow below steps.
       
       
       <b>Request</b>
+       <b>API :</b> http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089</b>
+       <b>Method : GET</b>
 
-          <b>API :</b> http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089</b>
-          
-         <b>Method : GET</b>
-         
-         <b>QueryParam:</b>
+       <b>QueryParam:</b>
          
                    <b>event_type(Required)</b> : The event_type for which count is requied
                    
