@@ -52,8 +52,14 @@ Follow below steps.
 1. I have created a RESTful api service using java dropwizard.Using these api's we can run aggegations/ search queries on events.
 2. The api uses data stored in elasticsearch.
 3. Below are the api endpoints for the same.
+   
    a. <b>Count API :</b>
+      ```
+      <b>Request</b> 
+          
+          <b> API :</b> http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089
       
+      ```
   
   
 
