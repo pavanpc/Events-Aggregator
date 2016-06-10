@@ -22,7 +22,7 @@ Follow below steps.
 
 2. The api inturn publishes  events to kafka.
 
-3. I have written a Kafka producer java app to mock this behavior. It pubslishes events to kafka using <b>SheduledExecutor Thread poool(10) servie </b> every second. The publish frequency is configurbale. This can be set in AppConfig.properties file.
+3. I have written a Kafka producer java app to mock this behavior. It pubslishes events to kafka using <b>SheduledExecutor Thread poool(10) servie </b> every second. The publish frequency is configurbale. This can be set in AppConfig.properties file. The code is available here- https://github.com/pavanpc/Events-Aggregator/tree/master/java-kafka-producer-mock
 #### Why Kafka? 
    1. The events should be processed in realtime.Assuming huge number of events, I decided to go with kafka.
    
@@ -45,8 +45,9 @@ Follow below steps.
 #### Why Elasticsearch?
   1. Elasticsearch provides very good SLA for reading data and aggregations. With my experience its<b> ~<20 ms</b> for normal search and aggregation queries for around <b>100 million records with 3 nodes(AWS medium size machine) cluster</b>. 
   2. It uses Inverted indexes(lucene) for storing data and hence its faster.
-  3. Also, we can build <b>realtime dashboards using Kibana </b>on top of it. This will be very helpful for Business guys to do analysis in real time.
-  4. The data in elasticsearch can be <b>purged for better perfomrance. We can store data for past 1 or 2 months and set TTL for purging historical  data</b>. In the mean time we can store data(stored in files/s3 ) in HDFS for later analysis. 
+  3. Also, elasticsaerch works very well for use cases with <b>Write Onnce and Read Many</b> patterns(similar to given use case).
+  4. Also, we can build <b>realtime dashboards using Kibana </b>on top of it. This will be very helpful for Business guys to do analysis in real time.
+  5. The data in elasticsearch can be <b>purged for better perfomrance. We can store data for past 1 or 2 months and set TTL for purging historical  data</b>. In the mean time we can store data(stored in files/s3 ) in HDFS for later analysis. 
   
 ###Ability to request the aggregated data by time range
 1. I have created a <b>RESTful api service using java dropwizard </b>.Using these api's we can run aggegations/ search queries on events.
