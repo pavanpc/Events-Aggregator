@@ -17,14 +17,36 @@ Follow below steps.
 
 ## Design Details
 
-#Data collection using the interface
-1. I am assuming the events are sent by sdk to backend using a Restful POST API asynchronously so that the app side will be less loaded. 
+###Data collection using the interface
+1. I am assuming the events are sent by sdk to backend using a <b>Restful POST API asynchronously</b> so that the app side will be less loaded.
 
-2. The api inturn publish the data to kafka.
+2. The api inturn publishes  events to kafka.
 
 3. I have written a Kafka producer java app to mock this behavior. It pubslishes events to kafka using <b>SheduledExecutor Thread poool(10) servie </b> every second. The publish frequency is configurbale. This can be set in AppConfig.properties file.
-### Why Kakfka? 
+#### Why Kakfka? 
    1. The events should be processed in realtime and assuming huge number of events being sent. I decided to go with kafka.
    
    2. Also the backend will not be heavy as it just needs to publish events to kafka.
+   
+   
+###Real time event processing
+1. I am using Spark streaming to process events.
+2. The stremaing program reads data from kafka and aggrgates results using a micro batch of interval 10 seconds. I have set it to 10 seconds just to test application behavior quickly.
+3. The program reads data and stores it in <b>elasticsearch</b>.
+4. At the same time it stores events in local file system in the following format.
+      </b> events_data/year=2016/month=6/day=10/hour=1 </b>
+5. The data is stored using partitions like year, month , daya and hout. This will be very helpful in processing data in future as explained later in the section below.
+
+#### Why Streaming spark?
+  1. Spark stremaing works really well with a lot of events. It gives very good abstractions for data transformation(map,reduce,filter,aggregation etc).Also its easy to change the soure(kafka) and destination(local file, s3,HDFS etc) just with less modifications.
+  
+  2. I have used pyspark because , we can find good documentation and help for python and scala compared to java.Also its easy to find python programmers compared to scala.So I thought it would be good to go with python considering future code maintenance.
+#### Why Elasticsearch?
+  1. Elasticsearch provides very good SLA for reading data and aggregations. With my experience its ~<20 ms for normal search and aggregation queries for around 100 million records with 3 nodes(AWS medium size machine) cluster. 
+  2. It uses Inverted indexes(lucene) for storing data and hence its faster.
+  3. Also, we can build realtime dashboards using Kibana on top of it. This will be very helpful for Business guys to do analysis in real time.
+  4. The data in elasticsearch can be purged for better perfomrance. We can store data for past 1 or 2 months and set TTL for purging past data. In the mean time we can store data(stored in files/s3 ) in HDFS for later analysis. 
+  
+  
+
 
