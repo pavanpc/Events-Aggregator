@@ -5,6 +5,7 @@
    1. Java 8
    2. Python >2.7
    3. pip ( follow this if pip is not installed -  https://pip.pypa.io/en/stable/installing/)
+   4. elasticsearch python client- run sudo pip install elasticsearch
 
 Follow below steps.
 
