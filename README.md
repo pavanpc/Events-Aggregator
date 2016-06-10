@@ -60,9 +60,13 @@ Follow below steps.
        **API : http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089**
        **Method : GET**
        **QueryParam:**
-       **event_type(Required)**: The event_type for which count is requied
-       **start_time(Required)** : The start_time is Unix Timestamp in seconds
-       **end_time(Required)**   : The end_time is Unix Timestamp in seconds
+           **event_type(Required)**: The event_type for which count is requied
+           **start_time(Required)** : The start_time is Unix Timestamp in seconds
+           **end_time(Required)**   : The end_time is Unix Timestamp in seconds
+      **Response**
+           **status** : Success/Error
+           **result**: The result key will hold the actual count
+           **timestamp**: timestamp is Unix Timestamp in seconds. This is the time at which api was run(helps in logging/debgging) 
       </pre>
 
   
