@@ -27,7 +27,11 @@ Follow below steps.
 
 7. Copy spark-1.6.0-bin-hadoop2.6.tgz, the downloaded file  to current directory
 8. tar xzf spark-1.6.0-bin-hadoop2.6.tgz
-   
+9. Run below command to start spark steaming program.
+       spark-1.6.0-bin-hadoop2.6/bin/spark-submit --jars dependencies/spark-streaming-kafka-assembly_2.10-1.6.1.jar pyspark-streaming-event-processor/event_aggregator.py
+10. Open a new terminal window to start mock kafka producer to publish events to kafka.
+11. Move to same directory as the cloned git hub project(step 2).
+12. ./kafka_publisher.sh
 
    
    
