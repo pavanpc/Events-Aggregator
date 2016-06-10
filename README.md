@@ -54,13 +54,13 @@ Follow below steps.
 3. Below are the api endpoints for the same.
    
    a. <b>Count API :</b>
-      ```
+      
       <pre>
       **Request**
           
           <b> API :</b> http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089
       </pre>
-      ```
+
   
   
 
