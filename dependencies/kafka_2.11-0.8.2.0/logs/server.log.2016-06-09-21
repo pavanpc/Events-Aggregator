@@ -1,0 +1,2 @@
+[2016-06-09 21:52:01,538] INFO Closing socket connection to /127.0.0.1. (kafka.network.Processor)
+[2016-06-09 21:52:04,136] INFO Closing socket connection to /127.0.0.1. (kafka.network.Processor)

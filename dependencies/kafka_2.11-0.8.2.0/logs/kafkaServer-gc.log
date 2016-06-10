@@ -1,0 +1,19 @@
+Java HotSpot(TM) 64-Bit Server VM (25.60-b23) for bsd-amd64 JRE (1.8.0_60-b27), built on Aug  4 2015 10:47:24 by "java_re" with gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+Memory: 4k page, physical 16777216k(3780136k free)
+
+/proc/meminfo:
+
+CommandLine flags: -XX:+CMSClassUnloadingEnabled -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -XX:InitialHeapSize=1073741824 -XX:+ManagementServer -XX:MaxHeapSize=1073741824 -XX:MaxNewSize=357916672 -XX:MaxTenuringThreshold=6 -XX:NewSize=357916672 -XX:OldPLABSize=16 -XX:OldSize=715825152 -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+UseParNewGC 
+2016-06-09T16:31:25.434-0530: 2829.014: [GC (Allocation Failure) 2016-06-09T16:31:25.434-0530: 2829.014: [ParNew: 279616K->12751K(314560K), 0.0173306 secs] 279616K->12751K(1013632K), 0.0174182 secs] [Times: user=0.05 sys=0.01, real=0.02 secs] 
+2016-06-09T17:07:50.227-0530: 5013.912: [GC (Allocation Failure) 2016-06-09T17:07:50.227-0530: 5013.912: [ParNew: 292367K->6109K(314560K), 0.0075210 secs] 292367K->6109K(1013632K), 0.0075997 secs] [Times: user=0.05 sys=0.00, real=0.01 secs] 
+2016-06-09T18:30:03.367-0530: 7256.036: [GC (Allocation Failure) 2016-06-09T18:30:03.367-0530: 7256.036: [ParNew: 285725K->6234K(314560K), 0.0076632 secs] 285725K->6234K(1013632K), 0.0077438 secs] [Times: user=0.05 sys=0.00, real=0.01 secs] 
+2016-06-09T19:09:34.147-0530: 9626.944: [GC (Allocation Failure) 2016-06-09T19:09:34.147-0530: 9626.944: [ParNew: 285850K->6388K(314560K), 0.0075500 secs] 285850K->6388K(1013632K), 0.0076283 secs] [Times: user=0.05 sys=0.00, real=0.01 secs] 
+2016-06-09T19:50:33.302-0530: 12086.228: [GC (Allocation Failure) 2016-06-09T19:50:33.302-0530: 12086.228: [ParNew: 286004K->6013K(314560K), 0.0075633 secs] 286004K->6013K(1013632K), 0.0076399 secs] [Times: user=0.05 sys=0.00, real=0.01 secs] 
+2016-06-09T20:24:57.032-0530: 14150.064: [GC (Allocation Failure) 2016-06-09T20:24:57.032-0530: 14150.064: [ParNew: 285629K->5491K(314560K), 0.0077942 secs] 285629K->5491K(1013632K), 0.0078802 secs] [Times: user=0.05 sys=0.00, real=0.01 secs] 
+2016-06-09T21:02:56.454-0530: 16429.588: [GC (Allocation Failure) 2016-06-09T21:02:56.454-0530: 16429.588: [ParNew: 285107K->4503K(314560K), 0.0187211 secs] 285107K->7687K(1013632K), 0.0187840 secs] [Times: user=0.06 sys=0.01, real=0.02 secs] 
+2016-06-09T21:44:22.636-0530: 18915.872: [GC (Allocation Failure) 2016-06-09T21:44:22.636-0530: 18915.872: [ParNew: 284119K->2572K(314560K), 0.0066545 secs] 287303K->5767K(1013632K), 0.0067383 secs] [Times: user=0.04 sys=0.00, real=0.01 secs] 
+2016-06-09T22:26:30.172-0530: 21443.516: [GC (Allocation Failure) 2016-06-09T22:26:30.172-0530: 21443.516: [ParNew: 282188K->2406K(314560K), 0.0066925 secs] 285383K->5675K(1013632K), 0.0067785 secs] [Times: user=0.04 sys=0.01, real=0.00 secs] 
+2016-06-09T23:09:14.187-0530: 24007.639: [GC (Allocation Failure) 2016-06-09T23:09:14.187-0530: 24007.639: [ParNew: 282022K->2565K(314560K), 0.0063583 secs] 285291K->5835K(1013632K), 0.0064413 secs] [Times: user=0.04 sys=0.00, real=0.01 secs] 
+2016-06-09T23:52:12.017-0530: 26585.578: [GC (Allocation Failure) 2016-06-09T23:52:12.017-0530: 26585.578: [ParNew: 282181K->2905K(314560K), 0.0062215 secs] 285451K->6177K(1013632K), 0.0063014 secs] [Times: user=0.03 sys=0.00, real=0.01 secs] 
+2016-06-10T02:25:10.638-0530: 29041.078: [GC (Allocation Failure) 2016-06-10T02:25:10.639-0530: 29041.079: [ParNew: 282521K->2275K(314560K), 0.0067657 secs] 285793K->5552K(1013632K), 0.0078488 secs] [Times: user=0.04 sys=0.00, real=0.01 secs] 
+2016-06-10T12:45:05.204-0530: 31345.092: [GC (Allocation Failure) 2016-06-10T12:45:05.205-0530: 31345.093: [ParNew: 281891K->2110K(314560K), 0.0070150 secs] 285168K->5389K(1013632K), 0.0079311 secs] [Times: user=0.04 sys=0.00, real=0.01 secs] 

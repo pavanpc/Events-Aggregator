@@ -1,0 +1,7 @@
+[2016-05-29 05:18:43,741] INFO Closing socket connection to /127.0.0.1. (kafka.network.Processor)
+[2016-05-29 05:18:43,742] INFO 0 successfully elected as leader (kafka.server.ZookeeperLeaderElector)
+[2016-05-29 05:18:43,753] INFO re-registering broker info in ZK for broker 0 (kafka.server.KafkaHealthcheck)
+[2016-05-29 05:18:43,754] INFO Registered broker 0 at path /brokers/ids/0 with address localhost:9092. (kafka.utils.ZkUtils$)
+[2016-05-29 05:18:43,754] INFO done re-registering broker (kafka.server.KafkaHealthcheck)
+[2016-05-29 05:18:43,755] INFO Subscribing to /brokers/topics path to watch for new topics (kafka.server.KafkaHealthcheck)
+[2016-05-29 05:18:43,770] INFO New leader is 0 (kafka.server.ZookeeperLeaderElector$LeaderChangeListener)
