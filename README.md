@@ -18,6 +18,7 @@ Follow below steps.
 4. chmod 755 setup.sh
 
 5. ./setup.sh
+
 6. Now set up spark. Click here to download spark pre built version- http://d3kbcqa49mib13.cloudfront.net/spark-1.6.0-bin-hadoop2.6.tgz
                      
      <b> OR Do following to download from spark homepage </b>
@@ -27,12 +28,21 @@ Follow below steps.
    Download spark->  version 1.6.0 , package type - Pre-built for Hadoop 2.6, download spark-1.6.0-bin-hadoop2.6.tgz
 
 7. Copy spark-1.6.0-bin-hadoop2.6.tgz, the downloaded file  to current directory
+
 8. tar xzf spark-1.6.0-bin-hadoop2.6.tgz
+
 9. Run below command to start spark steaming program.
        spark-1.6.0-bin-hadoop2.6/bin/spark-submit --jars dependencies/spark-streaming-kafka-assembly_2.10-1.6.1.jar pyspark-streaming-event-processor/event_aggregator.py
+
 10. Open a new terminal window to start mock kafka producer to publish events to kafka.
+
 11. Move to same directory as the cloned git hub project(step 2).
+
+11. chmod 755 kafka_publisher.sh
+
 12. ./kafka_publisher.sh
+
+The above step will start publishing events and go back to terminal where spark job is running to see output.Once the program exits, you can see events in events_dat folder in the same directory.
 
    
    
