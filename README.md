@@ -55,7 +55,7 @@ Follow below steps.
    
    a. <b>Count API :</b>
 
-       The API returns the count of events of given event type between start_time and end_time intervals.
+       The API returns the count of events of given event_type between start_time and end_time intervals.
       <pre>
       **Request**
        **API : http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089**
@@ -69,10 +69,30 @@ Follow below steps.
            **result**: The result key will hold the actual count
            **timestamp**: timestamp is Unix Timestamp in seconds. This is the time at which api was run(helps in logging/debgging) 
       **Example:**
-           query: http://http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089
+           query: http:localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089
            response:
                  {"result":185,"status":"SUCCESS","timeStamp":1465552391117}
       </pre>
+      
+   b. <b>Search API :</b>
+      <pre>
+      **Request**
+       **API : http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089**
+       **Method : GET**
+       **QueryParam:**
+           **event_type(Required)** : The event_type for which count is requied
+           **start_time(Required)** : The start_time is Unix Timestamp in seconds
+           **end_time(Required)**   : The end_time is Unix Timestamp in seconds
+      **Response**
+           **status** : Success/Error
+           **result**: The result key will hold the actual count
+           **timestamp**: timestamp is Unix Timestamp in seconds. This is the time at which api was run(helps in logging/debgging) 
+      **Example:**
+           query: http:localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089
+           response:
+                 {"result":185,"status":"SUCCESS","timeStamp":1465552391117}
+      </pre>
+   
 
   
   
