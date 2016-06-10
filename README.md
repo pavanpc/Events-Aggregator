@@ -34,6 +34,7 @@ Follow below steps.
 2. The stremaing program reads data from kafka and aggrgates results using a micro batch of interval 10 seconds. I have set it to 10 seconds just to test application behavior quickly.
 3. The program reads data and stores it in <b>elasticsearch</b>.
 4. At the same time it stores events in local file system in the following format.
+
       </b> events_data/year=2016/month=6/day=10/hour=1 </b>
 5. The data is stored using partitions like year, month , daya and hout. This will be very helpful in processing data in future as explained later in the section below.
 
@@ -42,10 +43,17 @@ Follow below steps.
   
   2. I have used pyspark because , we can find good documentation and help for python and scala compared to java.Also its easy to find python programmers compared to scala.So I thought it would be good to go with python considering future code maintenance.
 #### Why Elasticsearch?
-  1. Elasticsearch provides very good SLA for reading data and aggregations. With my experience its ~<20 ms for normal search and aggregation queries for around 100 million records with 3 nodes(AWS medium size machine) cluster. 
+  1. Elasticsearch provides very good SLA for reading data and aggregations. With my experience its<b> ~<20 ms</b? for normal search and aggregation queries for around <b>100 million records with 3 nodes(AWS medium size machine) cluster</b>. 
   2. It uses Inverted indexes(lucene) for storing data and hence its faster.
   3. Also, we can build realtime dashboards using Kibana on top of it. This will be very helpful for Business guys to do analysis in real time.
   4. The data in elasticsearch can be purged for better perfomrance. We can store data for past 1 or 2 months and set TTL for purging past data. In the mean time we can store data(stored in files/s3 ) in HDFS for later analysis. 
+  
+###Ability to request the aggregated data by time range
+1. I have created a RESTful api service using java dropwizard.Using these api's we can run aggegations/ search queries on events.
+2. The api uses data stored in elasticsearch.
+3. Below are the api endpoints for the same.
+   a. <b>Count API :</b>
+      
   
   
 
