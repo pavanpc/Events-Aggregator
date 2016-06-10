@@ -42,7 +42,7 @@ Follow below steps.
 
 12. ./kafka_publisher.sh
 
-The above step will start publishing events and go back to terminal where spark job is running to see output.Once the program exits, you can see events in events_dat folder in the same directory.
+The above step will start publishing events and go back to terminal where spark job is running to see the output.Once the spark  program exits, you can see events in events_data folder in the same directory.
 
    
    
