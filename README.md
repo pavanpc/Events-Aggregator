@@ -56,15 +56,15 @@ Follow below steps.
    a. <b>Count API :</b>
       
       
-      **Request**
+      <b>Request</b>
 
           <b>API :</b> http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089</b>
           
-         **Method : GET**
+         <b>Method : GET</b>
          
-         **QueryParam:**
+         <b>QueryParam:</b>
          
-                   **event_type(Required)** : The event_type for which count is requied
+                   <b>event_type(Required)</b> : The event_type for which count is requied
                    
                    **start_time(Required)** : The start_time is Unix Timestamp in seconds
                    
