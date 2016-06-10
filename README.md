@@ -27,7 +27,7 @@ Follow below steps.
    
    Download spark->  version 1.6.0 , package type - Pre-built for Hadoop 2.6, download spark-1.6.0-bin-hadoop2.6.tgz
 
-7. Copy spark-1.6.0-bin-hadoop2.6.tgz, the downloaded file  to current directory
+7. Copy the downloaded file   spark-1.6.0-bin-hadoop2.6.tgz   to current directory
 
 8. tar xzf spark-1.6.0-bin-hadoop2.6.tgz
 
