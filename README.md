@@ -27,12 +27,13 @@ Follow below steps.
    
    Download spark->  version 1.6.0 , package type - Pre-built for Hadoop 2.6, download spark-1.6.0-bin-hadoop2.6.tgz
 
-7. Copy the downloaded file   spark-1.6.0-bin-hadoop2.6.tgz   to current directory
+7. Copy the downloaded file   spark-1.6.0-bin-hadoop2.6.tgz to Events-Aggregator directory
 
 8. tar xzf spark-1.6.0-bin-hadoop2.6.tgz
 
 9. Run below command to start spark steaming program.
-       spark-1.6.0-bin-hadoop2.6/bin/spark-submit --jars dependencies/spark-streaming-kafka-assembly_2.10-1.6.1.jar pyspark-streaming-event-processor/event_aggregator.py
+       
+        spark-1.6.0-bin-hadoop2.6/bin/spark-submit --jars dependencies/spark-streaming-kafka-assembly_2.10-1.6.1.jar pyspark-streaming-event-processor/event_aggregator.py
 
 10. Open a new terminal window to start mock kafka producer to publish events to kafka.
 
