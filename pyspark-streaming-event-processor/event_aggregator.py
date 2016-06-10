@@ -9,6 +9,7 @@ import os
 import sys
 import json
 from datetime import datetime
+import time
 from elasticsearch import Elasticsearch
 from pyspark import SparkContext
 es = Elasticsearch(['localhost'])
@@ -43,10 +44,37 @@ def add_events_to_elasticsearch(eventJson):
     eventJson['id']= id
     try:
         es.index(index="events", doc_type="events", id=id, body=eventJson)
+        print(eventJson)
     except Exception as e:
         print("Exception in es")
         print(e)
     return eventJson
+
+def add_aggregated_info_to_elasticsearch(aggregation_record):
+    '''
+            The method adds the event json to elasticsearch
+            Args:
+                eventJson: event as json
+            Returns:
+                modified eventJson (with id field added)
+    '''
+    from elasticsearch import Elasticsearch
+    es = Elasticsearch(['localhost'])
+    # Add id field
+    jsonRecord={}
+    #print(aggregation_record)
+    id= str(aggregation_record[0])+ str(aggregation_record[1])
+    jsonRecord['id']= id
+    jsonRecord['window_start_time']= aggregation_record[0]
+    jsonRecord['event_type']= aggregation_record[1]
+    jsonRecord['count']= aggregation_record[2]
+    try:
+        es.index(index="events_aggregation", doc_type="events_aggregation", id=id, body=jsonRecord)
+        print(jsonRecord)
+    except Exception as e:
+        print("Exception in es")
+        print(e)
+    return jsonRecord
 
 def save_data_to_file_with_partitions(rdd):
     '''
@@ -67,7 +95,8 @@ def save_data_to_file_with_partitions(rdd):
             os.makedirs(directory)
         final_single_rdd.saveAsTextFiles(directory+str(minute)+".txt")
 
-
+def print_rec(rec):
+    print(rec)
 if __name__ == "__main__":
     '''
            Main method which does following
@@ -81,15 +110,21 @@ if __name__ == "__main__":
     # Intialized Spark config
     conf = SparkConf().setAppName("Kafka-Spark-Event-Aggregator")
     sc = SparkContext(conf=conf)
-    #sc.setLogLevel("ERROR")
+    sc.setLogLevel("ERROR")
     
     stream=StreamingContext(sc,5) #
     kafka_topic={'get_social_events':1}
     # Read the stream into dstreams
     # Note : this is the loclahost mode
     kafkaStream = KafkaUtils.createStream(stream, 'localhost:2181', "name", kafka_topic) 
+    print("Reading events from kafka.....")
     #print(kafkaStream.pprint())
+    window_start_time_in_utc = int(time.time())
     processed_events= kafkaStream.map(lambda event : get_json_from_string(event[1]) ).map(lambda eventJson: add_events_to_elasticsearch(eventJson))
+    aggregated_events= kafkaStream.map(lambda event : get_json_from_string(event[1]) ).map(lambda eventJson: (eventJson['event_type'],1) ).reduceByKey(lambda x,y:x+y).map(lambda x:(window_start_time_in_utc,x[0],x[1])).map(lambda aggregation_record: add_aggregated_info_to_elasticsearch(aggregation_record))
+    aggregated_events.pprint()
+    #aggregated_events.map(lambda x: print_rec(x))
+    print("Writing processed events to local file system.......")
     final_single_rdd= processed_events.repartition(1)
     save_data_to_file_with_partitions(final_single_rdd)
     
