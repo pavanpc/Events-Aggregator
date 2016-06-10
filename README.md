@@ -75,12 +75,16 @@ Follow below steps.
       </pre>
       
    b. <b>Search API :</b>
+       
+       i. The api returns all the records for given event_type between start_time and end_time.
+       
+       ii. If event_type is not specfied, it returns all event_type records between start_time and end_time.
       <pre>
       **Request**
-       **API : http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089**
+       **API : http://localhost:8080/getsocial/events/getallevents/?event_type=session_end&start_time=1465484000&end_time=1465489089**
        **Method : GET**
        **QueryParam:**
-           **event_type(Required)** : The event_type for which count is requied
+           **event_type(Optional)** : The event_type for which records need to be fetched.If not specified returns all recods of all event types
            **start_time(Required)** : The start_time is Unix Timestamp in seconds
            **end_time(Required)**   : The end_time is Unix Timestamp in seconds
       **Response**
