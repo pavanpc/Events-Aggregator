@@ -114,5 +114,15 @@ Follow below steps.
   3. We can do some useful analysis of this data using Map reduce jobs(hadoop/spark jobs) like client usage statistics, we can do user segmentations(if we also get client id along with events). These data can be sent as reports(simple csv would work) to clients so that clients can get better insights into their business. 
   4. With my past experience, storing data using <b>partitions like year,month.day,hour (above spark code uses this approach to store data in files just like s3)</b> helps in data processing. For example <b>map reduce / Hive jobs</b>. Partitions helps in reducing search space.
   
-
+##Technology Used
+  1. Python 2.7.6
+  2. kafka 0.9.0
+  3. pyspark -1.6
+  4. elasticsearch - 2.2.0
+  5. java 8
+  6. java kafka client
+  7. dropwizard - 0.9.2
+  8. eleasticsearch java transport client -2.2.0
+  9. java gson,jackson
+ 
 
