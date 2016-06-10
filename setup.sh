@@ -15,17 +15,25 @@
 echo "Successfully started elasticsearch !!!!"
 
 echo "Staring kafka......."
-./dependencies/kafka_2.11-0.8.2.0/bin/zookeeper-server-start.sh dependencies/kafka_2.11-0.8.2.0/config/zookeeper.properties &
+./dependencies/kafka_2.11-0.8.2.0/bin/zookeeper-server-start.sh dependencies/kafka_2.11-0.8.2.0/config/zookeeper.properties & > /dev/null
 sleep 5s
 echo "Started kafka zookeper...."
-./dependencies/kafka_2.11-0.8.2.0/bin/kafka-server-start.sh  dependencies/kafka_2.11-0.8.2.0/config/server.properties &
+./dependencies/kafka_2.11-0.8.2.0/bin/kafka-server-start.sh  dependencies/kafka_2.11-0.8.2.0/config/server.properties & > /dev/null
 sleep 5s
 echo "Started kafka server...."
 ./dependencies/kafka_2.11-0.8.2.0/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic get_social_events 
 
 sleep 5s
 
-./dependencies/kafka_2.11-0.8.2.0/bin/kafka-topics.sh --zookeeper localhost:2181 —-list
+#./dependencies/kafka_2.11-0.8.2.0/bin/kafka-topics.sh --zookeeper localhost:2181 —-list
 
 echo "Successfully started kafka !!!!"
 
+echo "Staring dropwizard service....."
+
+cd dependencies/dropwizard/
+
+java -jar getSocialEvents-1.0-SNAPSHOT.jar server configuration.yml & > /dev/null
+
+cd ../..
+echo "Successfully started dropwizard service  !!!!"
