@@ -45,8 +45,7 @@ Follow below steps.
 
 The above step will start publishing events and go back to terminal where spark job is running to see the output.Once the spark  program exits, you can see events in events_data folder in the same directory.
 
-   
-   
+To test the applicarion , use below mentioned Count/ Search API from browser.
 
 
 ## Design Details
