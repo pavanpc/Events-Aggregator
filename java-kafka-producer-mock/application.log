@@ -1,0 +1,63 @@
+2016-06-09 21:50:52 INFO  VerifiableProperties:68 - Verifying properties
+2016-06-09 21:50:52 INFO  VerifiableProperties:68 - Property client.id is overridden to camus
+2016-06-09 21:50:52 INFO  VerifiableProperties:68 - Property metadata.broker.list is overridden to localhost:9092
+2016-06-09 21:50:52 INFO  VerifiableProperties:68 - Property serializer.class is overridden to kafka.serializer.StringEncoder
+2016-06-09 21:52:01 INFO  VerifiableProperties:68 - Verifying properties
+2016-06-09 21:52:01 INFO  VerifiableProperties:68 - Property client.id is overridden to camus
+2016-06-09 21:52:01 INFO  VerifiableProperties:68 - Property metadata.broker.list is overridden to localhost:9092
+2016-06-09 21:52:01 INFO  VerifiableProperties:68 - Property serializer.class is overridden to kafka.serializer.StringEncoder
+2016-06-09 21:52:01 DEBUG DefaultEventHandler:52 - Handling 1 events
+2016-06-09 21:52:01 INFO  ClientUtils$:68 - Fetching metadata from broker id:0,host:localhost,port:9092 with correlation id 0 for 1 topic(s) Set(get_social_events)
+2016-06-09 21:52:01 DEBUG BlockingChannel:52 - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 408300 (requested -1), SO_SNDBUF = 114324 (requested 102400).
+2016-06-09 21:52:01 INFO  SyncProducer:68 - Connected to localhost:9092 for producing
+2016-06-09 21:52:01 INFO  SyncProducer:68 - Disconnecting from localhost:9092
+2016-06-09 21:52:01 DEBUG ClientUtils$:52 - Successfully fetched metadata for 1 topic(s) Set(get_social_events)
+2016-06-09 21:52:01 DEBUG BrokerPartitionInfo:52 - Getting broker partition info for topic get_social_events
+2016-06-09 21:52:01 DEBUG BrokerPartitionInfo:52 - Partition [get_social_events,0] has leader 0
+2016-06-09 21:52:01 DEBUG BrokerPartitionInfo:52 - Partition [get_social_events,1] has leader 0
+2016-06-09 21:52:01 DEBUG DefaultEventHandler:52 - Broker partitions registered for topic: get_social_events are 0,1
+2016-06-09 21:52:01 DEBUG DefaultEventHandler:52 - Sending 1 messages with no compression to [get_social_events,0]
+2016-06-09 21:52:01 DEBUG DefaultEventHandler:52 - Producer sending messages with correlation id 2 for topics [get_social_events,0] to broker 0 on localhost:9092
+2016-06-09 21:52:01 DEBUG BlockingChannel:52 - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 408300 (requested -1), SO_SNDBUF = 114324 (requested 102400).
+2016-06-09 21:52:01 INFO  SyncProducer:68 - Connected to localhost:9092 for producing
+2016-06-09 21:52:01 DEBUG DefaultEventHandler:52 - Producer sent messages with correlation id 2 for topics [get_social_events,0] to broker 0 on localhost:9092
+2016-06-09 21:52:01 DEBUG DefaultEventHandler:52 - Handling 1 events
+2016-06-09 21:52:01 DEBUG BrokerPartitionInfo:52 - Getting broker partition info for topic get_social_events
+2016-06-09 21:52:01 DEBUG BrokerPartitionInfo:52 - Partition [get_social_events,0] has leader 0
+2016-06-09 21:52:01 DEBUG BrokerPartitionInfo:52 - Partition [get_social_events,1] has leader 0
+2016-06-09 21:52:01 DEBUG DefaultEventHandler:52 - Broker partitions registered for topic: get_social_events are 0,1
+2016-06-09 21:52:01 DEBUG DefaultEventHandler:52 - Sending 1 messages with no compression to [get_social_events,0]
+2016-06-09 21:52:01 DEBUG DefaultEventHandler:52 - Producer sending messages with correlation id 4 for topics [get_social_events,0] to broker 0 on localhost:9092
+2016-06-09 21:52:01 DEBUG DefaultEventHandler:52 - Producer sent messages with correlation id 4 for topics [get_social_events,0] to broker 0 on localhost:9092
+2016-06-09 21:52:02 DEBUG DefaultEventHandler:52 - Handling 1 events
+2016-06-09 21:52:02 DEBUG BrokerPartitionInfo:52 - Getting broker partition info for topic get_social_events
+2016-06-09 21:52:02 DEBUG BrokerPartitionInfo:52 - Partition [get_social_events,0] has leader 0
+2016-06-09 21:52:02 DEBUG BrokerPartitionInfo:52 - Partition [get_social_events,1] has leader 0
+2016-06-09 21:52:02 DEBUG DefaultEventHandler:52 - Broker partitions registered for topic: get_social_events are 0,1
+2016-06-09 21:52:02 DEBUG DefaultEventHandler:52 - Sending 1 messages with no compression to [get_social_events,0]
+2016-06-09 21:52:02 DEBUG DefaultEventHandler:52 - Producer sending messages with correlation id 6 for topics [get_social_events,0] to broker 0 on localhost:9092
+2016-06-09 21:52:02 DEBUG DefaultEventHandler:52 - Producer sent messages with correlation id 6 for topics [get_social_events,0] to broker 0 on localhost:9092
+2016-06-09 21:52:02 DEBUG DefaultEventHandler:52 - Handling 1 events
+2016-06-09 21:52:02 DEBUG BrokerPartitionInfo:52 - Getting broker partition info for topic get_social_events
+2016-06-09 21:52:02 DEBUG BrokerPartitionInfo:52 - Partition [get_social_events,0] has leader 0
+2016-06-09 21:52:02 DEBUG BrokerPartitionInfo:52 - Partition [get_social_events,1] has leader 0
+2016-06-09 21:52:02 DEBUG DefaultEventHandler:52 - Broker partitions registered for topic: get_social_events are 0,1
+2016-06-09 21:52:02 DEBUG DefaultEventHandler:52 - Sending 1 messages with no compression to [get_social_events,0]
+2016-06-09 21:52:02 DEBUG DefaultEventHandler:52 - Producer sending messages with correlation id 8 for topics [get_social_events,0] to broker 0 on localhost:9092
+2016-06-09 21:52:02 DEBUG DefaultEventHandler:52 - Producer sent messages with correlation id 8 for topics [get_social_events,0] to broker 0 on localhost:9092
+2016-06-09 21:52:03 DEBUG DefaultEventHandler:52 - Handling 1 events
+2016-06-09 21:52:03 DEBUG BrokerPartitionInfo:52 - Getting broker partition info for topic get_social_events
+2016-06-09 21:52:03 DEBUG BrokerPartitionInfo:52 - Partition [get_social_events,0] has leader 0
+2016-06-09 21:52:03 DEBUG BrokerPartitionInfo:52 - Partition [get_social_events,1] has leader 0
+2016-06-09 21:52:03 DEBUG DefaultEventHandler:52 - Broker partitions registered for topic: get_social_events are 0,1
+2016-06-09 21:52:03 DEBUG DefaultEventHandler:52 - Sending 1 messages with no compression to [get_social_events,0]
+2016-06-09 21:52:03 DEBUG DefaultEventHandler:52 - Producer sending messages with correlation id 10 for topics [get_social_events,0] to broker 0 on localhost:9092
+2016-06-09 21:52:03 DEBUG DefaultEventHandler:52 - Producer sent messages with correlation id 10 for topics [get_social_events,0] to broker 0 on localhost:9092
+2016-06-09 21:52:03 DEBUG DefaultEventHandler:52 - Handling 1 events
+2016-06-09 21:52:03 DEBUG BrokerPartitionInfo:52 - Getting broker partition info for topic get_social_events
+2016-06-09 21:52:03 DEBUG BrokerPartitionInfo:52 - Partition [get_social_events,0] has leader 0
+2016-06-09 21:52:03 DEBUG BrokerPartitionInfo:52 - Partition [get_social_events,1] has leader 0
+2016-06-09 21:52:03 DEBUG DefaultEventHandler:52 - Broker partitions registered for topic: get_social_events are 0,1
+2016-06-09 21:52:03 DEBUG DefaultEventHandler:52 - Sending 1 messages with no compression to [get_social_events,0]
+2016-06-09 21:52:03 DEBUG DefaultEventHandler:52 - Producer sending messages with correlation id 12 for topics [get_social_events,0] to broker 0 on localhost:9092
+2016-06-09 21:52:03 DEBUG DefaultEventHandler:52 - Producer sent messages with correlation id 12 for topics [get_social_events,0] to broker 0 on localhost:9092

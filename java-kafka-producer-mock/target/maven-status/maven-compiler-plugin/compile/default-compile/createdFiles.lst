@@ -1,0 +1,4 @@
+eventaggregator/kafka/KafkaProducer.class
+eventaggregator/config/AppConfig.class
+eventaggregator/exception/AppConfigException.class
+eventaggregator/kafka/KafkaProducer$1.class

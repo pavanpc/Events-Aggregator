@@ -1,0 +1,2 @@
+{'params': {'Location service status': 'Location service On'}, 'platform': 'Android', 'session_uuid': '4c71b97e79fbbd5599945903e77065cef8a93cf8', 'event_type': 'session_start'}
+{'params': {'Location service status': 'Location service On'}, 'platform': 'Android', 'session_uuid': '4c71b97e79fbbd5599945903e77065cef8a93cf8', 'event_type': 'session_end'}
