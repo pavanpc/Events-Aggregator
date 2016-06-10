@@ -58,17 +58,17 @@ Follow below steps.
       <pre>
       **Request**
 
-          *** API :</b> http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089 ***
+          ** API :</b> http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089 **
           
-         ***Method : GET ***
+         **Method : GET **
          
-         ***QueryParam: ***
+         **QueryParam: **
          
-                   ***event_type(Required)*** : The event_type for which count is requied
+                   **event_type(Required)** : The event_type for which count is requied
                    
-                   ***start_time(Required)*** : The start_time is Unix Timestamp in seconds
+                   **start_time(Required)** : The start_time is Unix Timestamp in seconds
                    
-                   ***end_time(Required)***   : The end_time is Unix Timestamp in seconds
+                   **end_time(Required)**   : The end_time is Unix Timestamp in seconds
       </pre>
 
   
