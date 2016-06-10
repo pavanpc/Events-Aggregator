@@ -1,4 +1,4 @@
-# Real time  events processor using kafka, Spark Streaming,elasticsearch and dropwizard
+# Real time  events processor using kafka, spark streaming,elasticsearch and dropwizard
 
 ## Usage
 <b> Prerequisite</b> 
