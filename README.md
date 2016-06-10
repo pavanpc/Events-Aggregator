@@ -94,9 +94,10 @@ Follow below steps.
       **Example:**
            query: http:localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089
            response:
-                 {"result":[{"event_type":"session_end","id":"session_end1465484132","params":{"Location service        status":"Location service
-                 On", "os_type":"android"},"ts":1465484132},
-                 {"event_type":"session_end","id":"session_end1465484030","params":{"Location service status":"Location service On",  "os_type":"ios"},"ts":1465484030}
+                 {"result":[
+                             {"event_type":"session_end","id":"session_end1465484132","params":{"Location service           status":"Location service
+                               On", "os_type":"android"},"ts":1465484132},
+                            {"event_type":"session_end","id":"session_end1465484030","params":{"Location service status":"Location service On",  "os_type":"ios"},"ts":1465484030}
                  ],
                  "status":"SUCCESS",
                  "timeStamp":1465552391117}
