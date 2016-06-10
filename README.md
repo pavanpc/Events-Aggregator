@@ -54,7 +54,7 @@ Follow below steps.
 3. Below are the api endpoints for the same.
    
    a. <b>Count API :</b>
-      
+       i. The API returns the count of events of given event type between start_time and end_time intervals.
       <pre>
       **Request**
        **API : http://localhost:8080/getsocial/events/count/?event_type=session_end&start_time=1465484000&end_time=1465489089**
