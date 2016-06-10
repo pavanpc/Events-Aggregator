@@ -6,9 +6,9 @@ Follow below steps.
 
 1. Open a terminal window.
 
-2. git clone https://github.com/pavanpc/Twitter-Feeds-Stream-Clustering.git
+2. git clone https://github.com/pavanpc/Events-Aggregator.git
 
-3. cd Twitter-Feeds-Stream-Clustering
+3. cd Events-Aggregator
 
 4. chmod 755 setup.sh
 
