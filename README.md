@@ -1,6 +1,10 @@
 # Real time  events processor using kafka, Streaming spark,elasticsearch and dropwizard
 
 ## Usage
+<b> Prerequisite</b> 
+   1. Java 8
+   2. Python >2.7
+   3. pip ( follow this if pip is not installed -  https://pip.pypa.io/en/stable/installing/)
 
 Follow below steps.
 
