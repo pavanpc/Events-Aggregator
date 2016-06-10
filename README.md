@@ -36,7 +36,7 @@ Follow below steps.
 4. At the same time it stores events in local file system in the following format.
 
    <b> events_data/year=2016/month=6/day=10/hour=1 </b>
-5. The data is stored using partitions like year, month , daya and hout. This will be very helpful in processing data in future as explained later in the section below.
+5. The data is stored using partitions like year, month , day and hour. This will be very helpful in processing data in future as explained later in the section below.
 
 #### Why Streaming spark?
   1. Spark stremaing works really well with a lot of events. It gives very good abstractions for data transformation(map,reduce,filter,aggregation etc).Also its easy to change the soure(kafka) and destination(local file, s3,HDFS etc) just with less modifications.
@@ -99,10 +99,11 @@ Follow below steps.
    
 
   ###Future Data processing and its storage
+  
   1. The raw events can be stored in <b>S3</b>.Its very easy when data is stored in s3. 
   2. The data can be processed later using Hadoop/Map reduce jobs. Also we can store it as an external table in HIVE.
-  3. We can do some useful analysis of this data using Map reduce jobs(hadoop/spark jobs) like client usage statistics, we can do user segmentations(if we also get client id along with events). These data can be sent as reports(simple csv would work) to clients so that clients can better insights into their business. 
-  4. With my past experience, storing data using <b>partitions like year,month.dat,hour (above spark code uses this approach to store data in files just like s3)</b> helps in data processing. For example <b>map reduce / Hive jobs</b>. Partitions helps in reducing search space.
+  3. We can do some useful analysis of this data using Map reduce jobs(hadoop/spark jobs) like client usage statistics, we can do user segmentations(if we also get client id along with events). These data can be sent as reports(simple csv would work) to clients so that clients can get better insights into their business. 
+  4. With my past experience, storing data using <b>partitions like year,month.day,hour (above spark code uses this approach to store data in files just like s3)</b> helps in data processing. For example <b>map reduce / Hive jobs</b>. Partitions helps in reducing search space.
   
 
 
