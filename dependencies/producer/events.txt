@@ -1,0 +1,3 @@
+{'params': {'Location service status': 'Location service On','platform':'android'},  'event_type': 'session_start'}
+{'params': {'Location service status': 'Location service On','platform':'ios' },   'event_type': 'session_end'}
+{'params': {'Location service status': 'Location service On','platform':'ios' },   'event_type': 'link_clicked'}
