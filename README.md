@@ -18,7 +18,9 @@ Follow below steps.
 
 5. ./setup.sh
 6. Now set up spark. Click here to download spark pre built version- http://d3kbcqa49mib13.cloudfront.net/spark-1.6.0-bin-hadoop2.6.tgz
-                     <b> OR Do following to doenload from spark homepage </b>
+                     
+     <b> OR Do following to download from spark homepage </b>
+   
    Go to http://spark.apache.org/docs/latest/building-spark.html
    
    Download spark->  version 1.6.0 , package type - Pre-built for Hadoop 2.6, download spark-1.6.0-bin-hadoop2.6.tgz
