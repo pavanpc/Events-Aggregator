@@ -119,7 +119,7 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
        **API : http://localhost:8080/getsocial/events/getallevents/?event_type=session_end&start_time=1465484000&end_time=1465489089**
        **Method : GET**
        **QueryParam:**
-           **event_type(Optional)** : The event_type for which records need to be fetched.If not specified returns all recods of all event types
+           **event_type(Optional)** : The event_type for which records need to be fetched.If not specified returns all records of all event types
            **start_time(Required)** : The start_time is Unix Timestamp in seconds
            **end_time(Required)**   : The end_time is Unix Timestamp in seconds
       **Response**
