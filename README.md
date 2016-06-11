@@ -176,5 +176,10 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
   7. dropwizard - 0.9.2
   8. eleasticsearch java transport client -2.2.0
   9. java gson,jackson
+  
+## Another approach
+
+1. If we have access to AWS stack , we can use Kinesis, Spark streaming and Dynamodb. Its very reliable and scalable. The flow will be as shown below.
+    <b> Kinesis ---->  Spark Streaming(Aggregation) ----> DynanoDB  
  
 
