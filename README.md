@@ -158,8 +158,8 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
                  
       </pre>
    
-
-  ###Future Data processing and its storage
+   
+###Future Data processing and its storage
   
   1. The raw events can be stored in <b>S3</b>.Its very easy when data is stored in s3. 
   2. The data can be processed later using Hadoop/Map reduce jobs. Also we can store it as an external table in HIVE.
