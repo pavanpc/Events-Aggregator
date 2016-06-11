@@ -184,6 +184,7 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
      <b> Kinesis ---->  Spark Streaming(Aggregation) ----> DynanoDB  
 
 ### Enhancements
+   
    1. We can dockerize the whole application.
    2. We can use Mesos for efficient cluster uitilization.
    3. If  the SLA for data availability is less than ~10 ms , we should go with in memory NoSQL  DB's like Aerospike. It is    very fast and reliable.
