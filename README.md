@@ -75,7 +75,7 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
    #### Output of Spark streaming 
       <b> I. Aggregated events data in elasticsearch</b>
 
-       i. The events are aggregated by event type and count will be stored for every spark microbatch window. Below is the docuement format in elasticsearch index (events_aggregation). <b>If count queries are more</b> we can use this data instead of doing aggregation on raw events.
+      i. The events are aggregated by event type and count will be stored for every spark microbatch window. Below is the docuement format in elasticsearch index (events_aggregation). <b>If count queries are more</b> we can use this data instead of doing aggregation on raw events.
 
               id                      window_start_time    event_type     count
           ex: 1465583533session_start 1465583533           link_clicked   50
@@ -88,6 +88,7 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
           ex: session_end1465484030  1465484030   session_end    android        valueN
    
        <b> III. Raw events  in local file system (or S3)</b>
+         
          i. The raw events will be stored in local file system with partitions.
 
 #### Why Spark Streaming?
