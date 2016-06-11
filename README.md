@@ -183,7 +183,7 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
     
      <b> Kinesis ---->  Spark Streaming(Aggregation) ----> DynanoDB  
 
-### Enhancements
+###Enhancements
    
    1. We can dockerize the whole application.
    2. We can use Mesos for efficient cluster uitilization.
