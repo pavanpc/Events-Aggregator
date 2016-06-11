@@ -180,6 +180,7 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
 ## Another approach
 
 1. If we have access to AWS stack , we can use Kinesis, Spark streaming and Dynamodb. Its very reliable and scalable. The flow will be as shown below.
-    <b> Kinesis ---->  Spark Streaming(Aggregation) ----> DynanoDB  
+    
+<b> Kinesis ---->  Spark Streaming(Aggregation) ----> DynanoDB  
  
 
