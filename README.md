@@ -91,7 +91,7 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
          
       i. The raw events will be stored in local file system with partitions.
 
-#### Why Spark Streaming?
+ #### Why Spark Streaming?
   1. Spark stremaing works really well with a lot of events. It gives very good abstractions(RDD) for data transformation(map,reduce,filter,aggregation etc).Also its easy to change the soure(kafka) and destination(local file, s3,HDFS etc) with less modifications.
   
   2. I have used pyspark because , we can find good documentation and help for python and scala compared to java.Also its easy to find python programmers compared to scala.So I thought it would be good to go with python considering future code maintenance.
