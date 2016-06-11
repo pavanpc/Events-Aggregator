@@ -81,8 +81,8 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
           ex: 1465583533session_start 1465583533           link_clicked   50
    
       <b> II. Raw events  in elasticsearch</b>
-         
-         i. The raw events  wihh id field(eventy_type+ts) are inserted into elasticsearch. This data can be used to any analysis on events. Later this should be purged based on data size.
+      
+      i. The raw events  wihh id field(eventy_type+ts) are inserted into elasticsearch. This data can be used to any analysis on events. Later this should be purged based on data size.
 
               id                     ts           event_type     params.key1    params.keyN
           ex: session_end1465484030  1465484030   session_end    android        valueN
