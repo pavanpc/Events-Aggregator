@@ -82,14 +82,14 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
    
       <b> II. Raw events  in elasticsearch</b>
       
-      i. The raw events  wihh id field(eventy_type+ts) are inserted into elasticsearch. This data can be used to any analysis on events. Later this should be purged based on data size.
+      i. The raw events  with id field(eventy_type+ts) are inserted into elasticsearch. This data can be used to any analysis on events. Later this should be purged based on data size.
 
               id                     ts           event_type     params.key1    params.keyN
           ex: session_end1465484030  1465484030   session_end    android        valueN
    
        <b> III. Raw events  in local file system (or S3)</b>
          
-         i. The raw events will be stored in local file system with partitions.
+      i. The raw events will be stored in local file system with partitions.
 
 #### Why Spark Streaming?
   1. Spark stremaing works really well with a lot of events. It gives very good abstractions(RDD) for data transformation(map,reduce,filter,aggregation etc).Also its easy to change the soure(kafka) and destination(local file, s3,HDFS etc) with less modifications.
