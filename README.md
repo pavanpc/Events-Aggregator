@@ -99,7 +99,7 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
  #### Why Elasticsearch?
    
    
-   2. Elasticsearch provides very good SLA for reading data and aggregations. With my experience its<b> ~<20 ms</b> for normal search and aggregation queries for around <b>100 million records with 3 nodes(AWS medium size machine) cluster</b>.
+   2. Elasticsearch provides very good SLA for reading data and aggregations. With my experience it is less than <b> ~30 ms</b> for normal search and aggregation queries for around <b>100 million records with 3 nodes(AWS medium size machine) cluster</b>.
    3. Also, elasticsaerch works very well for use cases with <b>Write Onnce and Read Many</b> patterns(similar to given use case).
    4. Also, we can build <b>realtime dashboards using Kibana </b>on top of it. This will be very helpful for Business guys to do analysis in real time.
    5. It uses Inverted indexes(lucene) for storing data and hence its faster.
