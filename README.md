@@ -73,7 +73,9 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
    
    #### Output of Spark streaming 
        <b> I. Aggregated events dat in elasticsearch</b>
+
 i. The events are aggregated by event type and count will be stored for every spark microbatch window. Below is the docuement format in elasticsearch index (events_aggregation). <b>If count queries are more</b> we can use this data instead of doing aggregation om raw events.
+
 <b> id      window_start_time    event_type     count  </b>
 
 #### Why Spark Streaming?
