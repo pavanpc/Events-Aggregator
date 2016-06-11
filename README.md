@@ -97,15 +97,15 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
   2. I have used pyspark because , we can find good documentation and help for python and scala compared to java.Also its easy to find python programmers compared to scala.So I thought it would be good to go with python considering future code maintenance.
   
  #### Why Elasticsearch?
-   i. Elasticsearch provides very good SLA for reading data and aggregations. With my experience its<b> ~<20 ms</b> for normal search and aggregation queries for around <b>100 million records with 3 nodes(AWS medium size machine) cluster</b>. 
+    i. Elasticsearch provides very good SLA for reading data and aggregations. With my experience its<b> ~<20 ms</b> for normal search and aggregation queries for around <b>100 million records with 3 nodes(AWS medium size machine) cluster</b>. 
 
-   ii. It uses Inverted indexes(lucene) for storing data and hence its faster.
+    ii. It uses Inverted indexes(lucene) for storing data and hence its faster.
    
-   iii. Also, elasticsaerch works very well for use cases with <b>Write Onnce and Read Many</b> patterns(similar to given use case).
+    iii. Also, elasticsaerch works very well for use cases with <b>Write Onnce and Read Many</b> patterns(similar to given use case).
    
-   iv. Also, we can build <b>realtime dashboards using Kibana </b>on top of it. This will be very helpful for Business guys to do analysis in real time.
+    iv. Also, we can build <b>realtime dashboards using Kibana </b>on top of it. This will be very helpful for Business guys to do analysis in real time.
    
-   v. The data in elasticsearch can be <b>purged for better perfomrance. We can store data for past 1 or 2 months and set TTL for purging historical  data</b>. In the mean time we can store data(stored in files/s3 ) in HDFS for later analysis. 
+    v. The data in elasticsearch can be <b>purged for better perfomrance. We can store data for past 1 or 2 months and set TTL for purging historical  data</b>. In the mean time we can store data(stored in files/s3 ) in HDFS for later analysis. 
   
 ###Ability to request the aggregated data by time range
 1. I have created a <b>RESTful api service using java dropwizard </b>.Using these api's we can run aggegations/ search queries on events.
