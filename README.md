@@ -70,6 +70,11 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
 
    <b> events_data/year=2016/month=6/day=10/hour=1 </b>
 5. The data is stored using partitions like year, month , day and hour. This will be very helpful in processing data in future as explained later in the section below.
+   #### Output of Spark streaming 
+        <b>Aggregated events dat in elasticsearch</b>
+         i. The events are aggregated by event type and count will be stored for every spark microbatch window. Below is the
+            docuement format in elasticsearch index (events_aggregation)
+            <b> id      window_start_time    event_type     count  </b>
 
 #### Why Spark Streaming?
   1. Spark stremaing works really well with a lot of events. It gives very good abstractions for data transformation(map,reduce,filter,aggregation etc).Also its easy to change the soure(kafka) and destination(local file, s3,HDFS etc) just with less modifications.
