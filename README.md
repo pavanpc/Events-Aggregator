@@ -51,7 +51,7 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
 ## Design Details
 
 ###Data collection using the interface
-1. I am assuming the events are sent by sdk to backend using a <b>Restful POST API asynchronously</b> so that the app side will be less loaded.
+1. I am assuming the events are sent by sdk to backend using a <b>RESTful POST API asynchronously</b> so that the app side will be less loaded.
 
 2. The api inturn publishes  events to kafka.
 
