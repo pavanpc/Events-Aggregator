@@ -60,6 +60,7 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
    1. The events should be processed in realtime.Assuming huge number of events, I decided to go with kafka.
    
    2. Also the backend will not be heavy as it just needs to publish events to kafka.
+   3. Its Realtime, Scalable to handle large data volume, Low latency and Fault tolerant.
    
    
 ###Real time event processing
@@ -72,7 +73,7 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
 5. The data is stored using partitions like year, month , day and hour. This will be very helpful in processing data in future as explained later in the section below.
    
    #### Output of Spark streaming 
-      <b> I. Aggregated events dat in elasticsearch</b>
+      <b> I. Aggregated events data in elasticsearch</b>
 
        i. The events are aggregated by event type and count will be stored for every spark microbatch window. Below is the docuement format in elasticsearch index (events_aggregation). <b>If count queries are more</b> we can use this data instead of doing aggregation on raw events.
 
@@ -81,7 +82,7 @@ To test the applicarion , use below mentioned Count/ Search API from browser.
    
       <b> II. Raw events  in elasticsearch</b>
          
-         i. The raw events are wihh id field(eventy_type+ts) are inserted into elasticsearch. This data can be used to any analysis on events.Later this should be purged based on data size.
+         i. The raw events  wihh id field(eventy_type+ts) are inserted into elasticsearch. This data can be used to any analysis on events. Later this should be purged based on data size.
 
               id                     ts           event_type     params.key1    params.keyN
           ex: session_end1465484030  1465484030   session_end    android        valueN
